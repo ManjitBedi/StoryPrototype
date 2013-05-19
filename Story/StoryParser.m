@@ -49,8 +49,8 @@
     theRange.location = 1;
     theRange.length = [wholeArray count] -1;
     self.sections = [wholeArray subarrayWithRange:theRange];
-    _numberOfSection =  [_sections count];
-    NSLog(@"number of sections %d", _numberOfSection);
+    _numberOfSections =  [_sections count];
+    NSLog(@"number of sections %d", _numberOfSections);
 }
 
 

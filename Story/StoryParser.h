@@ -21,6 +21,6 @@
 
 @property (nonatomic, strong) NSData *data;
 @property (nonatomic, strong) NSString *contents;
-@property (readonly) NSUInteger numberOfSection;
+@property (readonly) NSUInteger numberOfSections;
 
 @end

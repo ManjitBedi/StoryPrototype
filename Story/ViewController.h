@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *contentTextView;
 @property (weak, nonatomic) IBOutlet UIButton *prevButton;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property NSUInteger sectionIndex;
 
 - (IBAction)prevSection:(id)sender;
 - (IBAction)nextButton:(id)sender;
