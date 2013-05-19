@@ -48,15 +48,41 @@
     NSRange theRange;
     theRange.location = 1;
     theRange.length = [wholeArray count] -1;
-    self.sections = [wholeArray subarrayWithRange:theRange];
-    _numberOfSections =  [_sections count];
+    NSArray *sectionData = [wholeArray subarrayWithRange:theRange];
+    _numberOfSections =  [sectionData count];
+    
     NSLog(@"number of sections %d", _numberOfSections);
+    
+    NSMutableArray *contentDicts = [[NSMutableArray alloc] initWithCapacity:_numberOfSections];
+    NSCharacterSet *charSet = [NSCharacterSet characterSetWithCharactersInString:@"\n"];
+    
+    for(NSString *section in sectionData) {
+
+        NSScanner *scanner = [NSScanner scannerWithString:section];
+        NSString *sectionName;
+        NSString *sectionContent;
+        [scanner scanUpToCharactersFromSet:charSet intoString:&sectionName];
+         
+        sectionContent = [[scanner string] substringFromIndex:[scanner scanLocation]];
+        
+        NSDictionary *contentDict =
+            @{
+                @"name" : sectionName,
+                @"content" : sectionContent
+            };
+        
+        [contentDicts addObject:contentDict];
+    }
+    
+    self.sections = (NSArray *) contentDicts;
 }
+
 
 
 - (NSString *) getSection:(NSUInteger) index{
     
-    NSString *section = [_sections objectAtIndex:index];
+    NSDictionary *dict =  [_sections objectAtIndex:index];
+    NSString *section = [dict objectForKey:@"content"];
     return  section;
 }
 
