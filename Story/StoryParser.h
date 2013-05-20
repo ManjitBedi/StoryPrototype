@@ -18,6 +18,7 @@
 - (void) loadAndParseStory:(NSString *) fileName;
 - (void) parseContents;
 - (NSString *) getSection:(NSUInteger) index;
+- (NSString *) getSectionByTag:(NSString *) string;
 
 @property (nonatomic, strong) NSData *data;
 @property (nonatomic, strong) NSString *contents;
