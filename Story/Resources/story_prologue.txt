@@ -1,26 +1,16 @@
 :: Start
-<html><img src=http:/aminus3.s3.amazonaws.com/image/g0006/u00005769/i01466133/090cb71cd26816456dd92c8106ddde53_large.jpg width="100%"></html>
+
 
 Hipstopia; a land where cliche's and The Mainstream have long sinced vanished, leaving only the most original, creative, ironic, and flannel loving citizens behind. In this world (claimed to be middle before the Middle Earth was middle) the imagination rules all, the source of true power.  You know, don't worry about it too much, it's a bit obscure, I'm sure you've never heard of it.
 
 *[[Next ->|Prologue 2]]
 
 
-:: StoryTitle
-Hipstopia
-
-
-:: StoryAuthor
-by Joey Morse
-
-
 :: My Styles [stylesheet]
 .passage { font-size: 2.2em; !important }
 
 
-
 :: Prologue 2
-<html><img src=http:/www.landscapeinstitute.org/news/images/uploads/main_image/97044070.jpg width="100%"></html>
 
 The Great Purge
 
@@ -30,7 +20,6 @@ Generations ago, the land was a far different place, for the Posers of Incorpora
 
 
 :: Prologue 3
-<html><img src=http:/images.nymag.com/images/2/daily/2009/09/20090903_soapbox_560x375.jpg width="100%"></html>
 
 It was in this dark time that few brave collections of outcasts came together. Coming together as Houses under shared interests, this band of misfits and artistic divas would come to shake this world like a, um, woofer....I guess? 
 The first steps towards The Purge were taken at the Council of Narsisia, the first gathering of all the major houses;
@@ -39,7 +28,6 @@ The first steps towards The Purge were taken at the Council of Narsisia, the fir
 
 
 :: Prologue 4
-<html><img src=http:/assets.sbnation.com/assets/642841/Hipster-Ariel.jpg width="100%"></html>
 
 The House of Thrown Paint, led by She-Who-Drinks-Lattes.
 
@@ -47,7 +35,6 @@ The House of Thrown Paint, led by She-Who-Drinks-Lattes.
 
 
 :: Prologue 5
-<html><img src=http:/i36.tinypic.com/2q16k9l.png width="100%"></html>
 
 The House of Anarchy, led by Fuckoff the Unpleasant.
 
@@ -55,7 +42,7 @@ The House of Anarchy, led by Fuckoff the Unpleasant.
 
 
 :: Prologue 6
-<html><img src=http:/www.bkmag.com/binary/a519/1353331264-hipsters31.jpg width="100%"></html>
+
 
 The House of House, led by DJ SnuggleButton.
 
@@ -63,7 +50,6 @@ The House of House, led by DJ SnuggleButton.
 
 
 :: Prologue 7
-<html><img src=http:/3.bp.blogspot.com/_dqXIF9MH3lk/TPKCJ9-zLcI/AAAAAAAALlo/V0xp83oexgI/s1600/screen-capture-19.jpg width="100%"></html>
 
 The House of Media, led by Please Write Name Here.
 
@@ -71,7 +57,6 @@ The House of Media, led by Please Write Name Here.
 
 
 :: Prologue 8
-<html><img src=http:/fashionhighclass.com/wp-content/uploads/2011/06/big-mustache-unique.jpg width="100%"></html>
 
 The House of Nostalgia, led by Mike of the Overtly Large Mustache Clan.
 
@@ -79,7 +64,6 @@ The House of Nostalgia, led by Mike of the Overtly Large Mustache Clan.
 
 
 :: Prologue 9
-<html><img src=http:/thejailbreak.com/wp-content/uploads/2010/09/juice.jpg width="100%"></html>
 
 Together, these wizards of creativity united the minor houses and clans in a rebellion against the powers of oppression.  By the end of the campaign, the fields would be littered with spare mic leads, broken iMacs, rollie cigs, mounds of coffee cups and the bodies of the unlucky.  However, these losses had not been in vain for the war had been won and the powers of darkness purged from the land.
 
@@ -87,7 +71,6 @@ Together, these wizards of creativity united the minor houses and clans in a reb
 
 
 :: Prologue 10
-<html><img src=http:/www.maurilioamorim.com/wp-content/uploads/2010/08/Hipster-Christianity-Jesus.jpg width="100%"></html>
 
 Skip ahead three generations (some say four, but most think that the second one was waaaaaaay over rated), and outside of a few arguments over phenomenology and The Smiths, peace has reigned between the houses and clans for as long as anyone can remember - art, music, and coffee shops rule the landscape now.  
 
@@ -98,7 +81,6 @@ However, as with all things, change is inevitable and ever in the making.  We jo
 
 
 :: Choose your avatar!
-<html><img src=http:/i1055.photobucket.com/albums/s501/j_a_m83/Theherochoices.jpg width="100%"></html>
 
 Choose your avatar!
 
@@ -117,5 +99,3 @@ Coming Soon!
 
 :: Brooklyn, the beginning
 Coming Soon!
-
-

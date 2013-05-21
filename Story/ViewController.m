@@ -70,6 +70,8 @@ static inline NSRegularExpression * ParenthesisRegularExpression() {
     [parser loadAndParseStory:@"story_prologue"];
     NSString *string  = [parser getSection:_sectionIndex];
     
+    
+    
     self.contentLabel = [[TTTAttributedLabel alloc] initWithFrame:CGRectMake(0, 0, 320, 360)];
     _contentLabel.font = [UIFont systemFontOfSize:14];
     _contentLabel.textColor = [UIColor darkGrayColor];
