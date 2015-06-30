@@ -63,7 +63,7 @@
 		78F2C1B917475612003F328E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		78F2C1BB17475612003F328E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		78F2C1BC17475612003F328E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		78F2C1C317475612003F328E /* StoryTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoryTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78F2C1C317475612003F328E /* StoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F2C1CC17475612003F328E /* StoryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StoryTests-Info.plist"; sourceTree = "<group>"; };
 		78F2C1CE17475612003F328E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		78F2C1D017475612003F328E /* StoryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoryTests.h; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				78F2C19A17475612003F328E /* Story.app */,
-				78F2C1C317475612003F328E /* StoryTests.octest */,
+				78F2C1C317475612003F328E /* StoryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -236,7 +236,7 @@
 			);
 			name = StoryTests;
 			productName = StoryTests;
-			productReference = 78F2C1C317475612003F328E /* StoryTests.octest */;
+			productReference = 78F2C1C317475612003F328E /* StoryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
