@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Manjit Bedi. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface StoryTests : SenTestCase
+@interface StoryTests : XCTestCase
 
 @end
