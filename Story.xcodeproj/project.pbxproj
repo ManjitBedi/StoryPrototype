@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7891858E174840D100B6FEAA /* StoryParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7891858D174840D100B6FEAA /* StoryParser.m */; };
 		789185911748451100B6FEAA /* story_prologue.txt in Resources */ = {isa = PBXBuildFile; fileRef = 789185901748451100B6FEAA /* story_prologue.txt */; };
-		78B6E5D417494E1700F7743F /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B6E5D317494E1700F7743F /* TTTAttributedLabel.m */; };
 		78B6E5D617494EB900F7743F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B6E5D517494EB900F7743F /* CoreText.framework */; };
 		78F2C19E17475612003F328E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F2C19D17475612003F328E /* UIKit.framework */; };
 		78F2C1A017475612003F328E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F2C19F17475612003F328E /* Foundation.framework */; };
@@ -42,8 +41,6 @@
 		7891858C174840D100B6FEAA /* StoryParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryParser.h; sourceTree = "<group>"; };
 		7891858D174840D100B6FEAA /* StoryParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryParser.m; sourceTree = "<group>"; };
 		789185901748451100B6FEAA /* story_prologue.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = story_prologue.txt; sourceTree = "<group>"; };
-		78B6E5D217494E1700F7743F /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
-		78B6E5D317494E1700F7743F /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		78B6E5D517494EB900F7743F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		78F2C19A17475612003F328E /* Story.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Story.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F2C19D17475612003F328E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -100,23 +97,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		78B6E5D017494E1700F7743F /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				78B6E5D117494E1700F7743F /* TTTAttributedLabel */,
-			);
-			path = Library;
-			sourceTree = "<group>";
-		};
-		78B6E5D117494E1700F7743F /* TTTAttributedLabel */ = {
-			isa = PBXGroup;
-			children = (
-				78B6E5D217494E1700F7743F /* TTTAttributedLabel.h */,
-				78B6E5D317494E1700F7743F /* TTTAttributedLabel.m */,
-			);
-			path = TTTAttributedLabel;
-			sourceTree = "<group>";
-		};
 		78F2C19117475612003F328E = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +130,6 @@
 		78F2C1A317475612003F328E /* Story */ = {
 			isa = PBXGroup;
 			children = (
-				78B6E5D017494E1700F7743F /* Library */,
 				78F2C1AC17475612003F328E /* AppDelegate.h */,
 				78F2C1AD17475612003F328E /* AppDelegate.m */,
 				78F2C1B517475612003F328E /* Main.storyboard */,
@@ -313,7 +292,6 @@
 				78F2C1AE17475612003F328E /* AppDelegate.m in Sources */,
 				78F2C1BD17475612003F328E /* ViewController.m in Sources */,
 				7891858E174840D100B6FEAA /* StoryParser.m in Sources */,
-				78B6E5D417494E1700F7743F /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

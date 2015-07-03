@@ -8,15 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class TTTAttributedLabel;
 
 @interface ViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextView *contentTextView;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @property (weak, nonatomic) IBOutlet UIButton *prevButton;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 
-// TODO: change to use a UILabel with attributed text
-@property (strong, nonatomic) TTTAttributedLabel *contentLabel;
+
 @property NSUInteger sectionIndex;
 
 - (IBAction)prevSection:(id)sender;

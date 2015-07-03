@@ -8,9 +8,7 @@
 
 #import "ViewController.h"
 #import "StoryParser.h"
-#import "TTTAttributedLabel.h"
 
-//static CGFloat const kEspressoDescriptionTextFontSize = 17.0f;
 
 static inline NSRegularExpression * NameRegularExpression() {
     static NSRegularExpression *_nameRegularExpression = nil;
@@ -63,9 +61,6 @@ static inline NSRegularExpression * ParenthesisRegularExpression() {
     [parser loadAndParseStory:@"story_prologue"];
     NSString *string  = [parser getSection:_sectionIndex];
     
-    
-    // TODO: change this to use UI Label with attrubuted text
-    self.contentLabel = [[TTTAttributedLabel alloc] initWithFrame:CGRectMake(0, 0, 320, 360)];
     _contentLabel.font = [UIFont systemFontOfSize:14];
     _contentLabel.textColor = [UIColor darkGrayColor];
     _contentLabel.lineBreakMode = NSLineBreakByWordWrapping;
@@ -73,19 +68,18 @@ static inline NSRegularExpression * ParenthesisRegularExpression() {
     _contentLabel.opaque = NO;
     _contentLabel.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_contentLabel];
-    _contentLabel.delegate = (id) self;
     [_contentLabel setText:string];
     
     // Search for links in the resource and configure teh action.
-    NSError *error = nil;
-    NSString *regularExpression = @"\\[\\[(.*)\\]\\]";
-    NSString *testString = string;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regularExpression options:0 error:&error];
-    NSArray *matches = [regex matchesInString:testString options:0 range:NSMakeRange(0, [testString length])];
-    for (NSTextCheckingResult *match in matches) {
-
-        [_contentLabel addLinkWithTextCheckingResult:match];
-    }
+//    NSError *error = nil;
+//    NSString *regularExpression = @"\\[\\[(.*)\\]\\]";
+//    NSString *testString = string;
+//    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regularExpression options:0 error:&error];
+//    NSArray *matches = [regex matchesInString:testString options:0 range:NSMakeRange(0, [testString length])];
+//    for (NSTextCheckingResult *match in matches) {
+//
+//        [_contentLabel addLinkWithTextCheckingResult:match];
+//    }
 }
 
 
@@ -95,7 +89,7 @@ static inline NSRegularExpression * ParenthesisRegularExpression() {
         _sectionIndex--;
     
         NSString *string  = [[StoryParser sharedInstance] getSection:_sectionIndex];
-        _contentTextView.text = string;
+        _contentLabel.text = string;
     }
 }
 
@@ -107,33 +101,33 @@ static inline NSRegularExpression * ParenthesisRegularExpression() {
         _sectionIndex++;
 
         NSString *string  = [parser getSection:_sectionIndex];
-        _contentTextView.text = string;
+        _contentLabel.text = string;
     }
 }
 
 #pragma mark - 
-- (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithTextCheckingResult:(NSTextCheckingResult *)result {
-    
-    NSString *string = [label.text substringWithRange:[result range]];
-    NSLog(@"link tapped %@, %@", result, string);
-    
-    NSArray *array = [string componentsSeparatedByString:@"|"];
-    NSString *string2 = [array objectAtIndex:1];
-    NSString *link = [string2 substringToIndex:[string2 length]- 2];
-    NSString *contentString = [[StoryParser sharedInstance] getSectionByTag:link];
-    
-    if(contentString) {
-        [_contentLabel setText:contentString];
-        // Note: do we need to clear any links?
-        NSError *error = nil;
-        NSString *regularExpression = @"\\[\\[(.*)\\]\\]";
-        NSString *testString = contentString;
-        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regularExpression options:0 error:&error];
-        NSArray *matches = [regex matchesInString:testString options:0 range:NSMakeRange(0, [testString length])];
-        for (NSTextCheckingResult *match in matches) {
-            
-            [_contentLabel addLinkWithTextCheckingResult:match];
-        }
-    }
-}
+//- (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithTextCheckingResult:(NSTextCheckingResult *)result {
+//    
+//    NSString *string = [label.text substringWithRange:[result range]];
+//    NSLog(@"link tapped %@, %@", result, string);
+//    
+//    NSArray *array = [string componentsSeparatedByString:@"|"];
+//    NSString *string2 = [array objectAtIndex:1];
+//    NSString *link = [string2 substringToIndex:[string2 length]- 2];
+//    NSString *contentString = [[StoryParser sharedInstance] getSectionByTag:link];
+//    
+//    if(contentString) {
+//        [_contentLabel setText:contentString];
+//        // Note: do we need to clear any links?
+//        NSError *error = nil;
+//        NSString *regularExpression = @"\\[\\[(.*)\\]\\]";
+//        NSString *testString = contentString;
+//        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regularExpression options:0 error:&error];
+//        NSArray *matches = [regex matchesInString:testString options:0 range:NSMakeRange(0, [testString length])];
+//        for (NSTextCheckingResult *match in matches) {
+//            
+//            [_contentLabel addLinkWithTextCheckingResult:match];
+//        }
+//    }
+//}
 @end
