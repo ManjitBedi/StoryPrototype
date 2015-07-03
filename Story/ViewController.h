@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @property (weak, nonatomic) IBOutlet UIButton *prevButton;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (strong, nonatomic) NSString *sectionTag;
 
 
 @property NSUInteger sectionIndex;

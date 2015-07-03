@@ -58,8 +58,12 @@ static inline NSRegularExpression * ParenthesisRegularExpression() {
     
     StoryParser *parser = [StoryParser sharedInstance];
     _sectionIndex = 0;
+    
+    // parse the content
     [parser loadAndParseStory:@"story_prologue"];
-    NSString *string  = [parser getSection:_sectionIndex];
+    
+    // get the string for the content section from the first section.
+    NSString *contentString  = [parser getSection:_sectionIndex];
     
     _contentLabel.font = [UIFont systemFontOfSize:14];
     _contentLabel.textColor = [UIColor darkGrayColor];
@@ -68,18 +72,22 @@ static inline NSRegularExpression * ParenthesisRegularExpression() {
     _contentLabel.opaque = NO;
     _contentLabel.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_contentLabel];
-    [_contentLabel setText:string];
+    [_contentLabel setText:contentString];
     
-    // Search for links in the resource and configure teh action.
-//    NSError *error = nil;
-//    NSString *regularExpression = @"\\[\\[(.*)\\]\\]";
-//    NSString *testString = string;
-//    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regularExpression options:0 error:&error];
-//    NSArray *matches = [regex matchesInString:testString options:0 range:NSMakeRange(0, [testString length])];
-//    for (NSTextCheckingResult *match in matches) {
-//
-//        [_contentLabel addLinkWithTextCheckingResult:match];
-//    }
+    // Search for links in the resource & set up a link
+    NSError *error = nil;
+    
+    // A link looks like:  [[Next ->|Prologue 2]]
+    // 'Next' is indicating the navigation direction
+    // 'Prologue 2' is the desciptive tag
+    NSString *regularExpression = @"\\[\\[(.*)\\]\\]";
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regularExpression options:0 error:&error];
+    
+    [regex enumerateMatchesInString:contentString options:0 range:NSMakeRange(0, contentString.length) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+
+        NSString *tag = [contentString substringWithRange:[result rangeAtIndex:0]];
+        NSLog(@"tag '%@'", tag);
+    }];
 }
 
 
