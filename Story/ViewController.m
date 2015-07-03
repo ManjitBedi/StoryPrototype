@@ -10,7 +10,7 @@
 #import "StoryParser.h"
 #import "TTTAttributedLabel.h"
 
-static CGFloat const kEspressoDescriptionTextFontSize = 17.0f;
+//static CGFloat const kEspressoDescriptionTextFontSize = 17.0f;
 
 static inline NSRegularExpression * NameRegularExpression() {
     static NSRegularExpression *_nameRegularExpression = nil;
@@ -44,13 +44,6 @@ static inline NSRegularExpression * ParenthesisRegularExpression() {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    
-    self.contentLabel = [[TTTAttributedLabel alloc] initWithFrame:CGRectZero];
-    _contentLabel.font = [UIFont systemFontOfSize:14];
-    _contentLabel.textColor = [UIColor darkGrayColor];
-    _contentLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    _contentLabel.numberOfLines = 0;
     
     [self loadStoryResource];
 }
@@ -71,7 +64,7 @@ static inline NSRegularExpression * ParenthesisRegularExpression() {
     NSString *string  = [parser getSection:_sectionIndex];
     
     
-    
+    // TODO: change this to use UI Label with attrubuted text
     self.contentLabel = [[TTTAttributedLabel alloc] initWithFrame:CGRectMake(0, 0, 320, 360)];
     _contentLabel.font = [UIFont systemFontOfSize:14];
     _contentLabel.textColor = [UIColor darkGrayColor];
@@ -83,6 +76,7 @@ static inline NSRegularExpression * ParenthesisRegularExpression() {
     _contentLabel.delegate = (id) self;
     [_contentLabel setText:string];
     
+    // Search for links in the resource and configure teh action.
     NSError *error = nil;
     NSString *regularExpression = @"\\[\\[(.*)\\]\\]";
     NSString *testString = string;

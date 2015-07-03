@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UITextView *contentTextView;
 @property (weak, nonatomic) IBOutlet UIButton *prevButton;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
+
+// TODO: change to use a UILabel with attributed text
 @property (strong, nonatomic) TTTAttributedLabel *contentLabel;
 @property NSUInteger sectionIndex;
 

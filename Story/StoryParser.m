@@ -53,7 +53,7 @@
     NSArray *sectionData = [wholeArray subarrayWithRange:theRange];
     _numberOfSections =  [sectionData count];
     self.story = [[NSMutableDictionary alloc] initWithCapacity:_numberOfSections];
-    NSLog(@"number of sections %d", _numberOfSections);
+    NSLog(@"number of sections %d", (unsigned int) _numberOfSections);
     NSMutableArray *contentDicts = [[NSMutableArray alloc] initWithCapacity:_numberOfSections];
     NSCharacterSet *charSet = [NSCharacterSet characterSetWithCharactersInString:@"\n"];
     for(NSString *section in sectionData) {

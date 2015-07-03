@@ -12,12 +12,20 @@
 
 + (StoryParser *) sharedInstance;
 
-/*
- * fileName : name of text file that conforms to the Twee text file format
- */
+
+// given a resource filename open the file for processing
+// TODO: update the data format to spport harlowe: https://bitbucket.org/_L_/harlowe
 - (void) loadAndParseStory:(NSString *) fileName;
+
+// Take the loaded data and parse the file & create foundation class representations of the data.
+// A story is made up of sections.
 - (void) parseContents;
+
+// Get the section by index in the story resource
 - (NSString *) getSection:(NSUInteger) index;
+
+// Get the section by the named tag.
+
 - (NSString *) getSectionByTag:(NSString *) string;
 
 @property (nonatomic, strong) NSData *data;
