@@ -1,0 +1,17 @@
+::TheChicken
+
+THere is a chicken, there is a road.  What should the chicken do?
+
+Do [[nothing|Nothing]] or [[cross the road|Cross Road]]
+
+
+::Nothing
+The chicken does nothing; it eventually takes a nap and goes into a deep sleep.
+
+The end.
+
+
+::Cross Road
+The chicken crosses the road.  It sees some worms;  it eats & it is happy.
+
+The end.

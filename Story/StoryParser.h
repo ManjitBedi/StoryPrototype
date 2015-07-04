@@ -16,7 +16,6 @@
 
 
 // given a resource filename open the file for processing
-// TODO: update the data format to spport harlowe: https://bitbucket.org/_L_/harlowe
 - (void) loadAndParseStory:(NSString *) fileName;
 
 // Take the loaded data and parse the file & create foundation class representations of the data.

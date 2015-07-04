@@ -3,12 +3,14 @@ StoryPrototype
 
 Note: this code is a bit old;  I intend to update it over the next few months.
 
-The initial work was creating an iOS app that will read in the Twee text file format used by Twine.
+I have a conudrum.  Using Twine would be good but the newest version of the Twine editor
+does not support the Twee file format which is a plain text format.
 
 http://twinery.org
 
-With the newer version of Twine there are now 3 formats.  I plan to look into adding support for Hawlowe.
+The other decision to make is how to handle the display of text and handling of tapping on links.
+There is an open source project on Cocoapods that could help here:
 
-https://bitbucket.org/_L_/harlowe
+https://cocoapods.org/pods/TTTAttributedLabel
 
-The goal is to create reusable engine that can load branching stories created using Twine.
+The goal is to create a reusable engine for iOS that can load content created using Twine.

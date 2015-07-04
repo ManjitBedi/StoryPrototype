@@ -60,7 +60,7 @@ static inline NSRegularExpression * ParenthesisRegularExpression() {
     _sectionIndex = 0;
     
     // parse the content
-    [parser loadAndParseStory:@"story_prologue"];
+    [parser loadAndParseStory:@"story"];
     
     // get the string for the content section from the first section.
     NSString *contentString  = [parser getSection:_sectionIndex];
@@ -78,8 +78,8 @@ static inline NSRegularExpression * ParenthesisRegularExpression() {
     NSError *error = nil;
     
     // A link looks like:  [[Next ->|Prologue 2]]
-    // 'Next' is indicating the navigation direction
-    // 'Prologue 2' is the desciptive tag
+    // 'Next' is the display text
+    // 'Prologue 2' is section tag
     NSString *regularExpression = @"\\[\\[(.*)\\]\\]";
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regularExpression options:0 error:&error];
     
@@ -87,6 +87,10 @@ static inline NSRegularExpression * ParenthesisRegularExpression() {
 
         NSString *tag = [contentString substringWithRange:[result rangeAtIndex:0]];
         NSLog(@"tag '%@'", tag);
+        NSArray *array = [tag componentsSeparatedByString:@"|"];
+        NSString *string2 = [array objectAtIndex:1];
+        NSString *link = [string2 substringToIndex:[string2 length]- 2];
+        self.sectionTag = link;
     }];
 }
 
